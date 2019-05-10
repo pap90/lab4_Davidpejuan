@@ -103,9 +103,13 @@ char** llenar(char** mat,int x,int y){
 	}
 }
 void contar(char** mat,int x, int y){
+	int contador=0;
 	for(int i=0;i<y;i++){
 		for(int j=0;j<x;j++){
-			if(mat[i][j]=='.'){}
+			if(mat[i][j]=='.'){
+				contador++;
+			}
 		}
 	}
+	cout<<"El numero de casillas seguras es: "<<contador<<endl;
 }
