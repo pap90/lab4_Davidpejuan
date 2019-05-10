@@ -30,6 +30,7 @@ int main(){
 	llenar(mat,x,y);
 	printmat(mat,x,y);
 	contar(mat,x,y);
+	liberarMatriz(mat,x,y);
 }
 char** crearmat(int x,int y){
 	char** mat=NULL;
