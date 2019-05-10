@@ -61,9 +61,39 @@ char** llenar(char** mat,int x,int y){
 		char* arreglo=mat[i-1];
 		for(int j=0;j<x;j++){
 			//cout<< "["<<arreglo[j]<<"]";
-			if(j+2>=x){
+			/*if(j>1 && j+2>=x){
 				if(arreglo[j]=='^'&&arreglo[j+1]=='^'&&arreglo[j+2]){
 					
+				}
+			}*/
+			if(j==1&&j<x){
+				if(arreglo[j]=='^'&&arreglo[j+1]=='^'){
+					mat[i][j]='^';
+				}
+				else if(arreglo[j+1]=='^'){
+					mat[i][j]='^';
+				}else {
+					mat[i][j]='.';
+				}
+			}else if(j>1&&j<x){
+				if(arreglo[j-1]=='^'&&arreglo[j]=='^'&&arreglo[j+1]=='.'){
+					mat[i][j]='^';
+				}else if(arreglo[j-1]=='.'&&arreglo[j]=='^'&&arreglo[j+1]=='^'){
+					mat[i][j]='^';
+				}else if(arreglo[j-1]=='^'&&arreglo[j]=='.'&&arreglo[j+1]=='.'){
+					mat[i][j]='^';
+				}else if(arreglo[j-1]=='.'&&arreglo[j]=='.'&&arreglo[j+1]=='^'){
+					mat[i][j]='^';
+				}else{
+					mat[i][j]='.';
+				}
+			}else if(j>1&&j=x){
+				if(arreglo[j-1]=='^'&&arreglo[j]=='^'){
+					mat[i][j]='^';
+				}else if(arreglo[j-1]=='^'&&arreglo[j]=='.'){
+					mat[i][j]='^';
+				}else{
+					mat[i][j]='.';
 				}
 			}
 		}
