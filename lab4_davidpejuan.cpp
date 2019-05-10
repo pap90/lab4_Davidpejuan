@@ -28,6 +28,7 @@ int main(){
 	}
 	//printmat(mat,x,y);
 	llenar(mat,x,y);
+	printmat(mat,x,y);
 	
 }
 char** crearmat(int x,int y){
@@ -66,7 +67,7 @@ char** llenar(char** mat,int x,int y){
 					
 				}
 			}*/
-			if(j==1&&j<x){
+			if(j==0&&j<x){
 				if(arreglo[j]=='^'&&arreglo[j+1]=='^'){
 					mat[i][j]='^';
 				}
@@ -75,7 +76,7 @@ char** llenar(char** mat,int x,int y){
 				}else {
 					mat[i][j]='.';
 				}
-			}else if(j>1&&j<x){
+			}else if(j>0&&j<x){
 				if(arreglo[j-1]=='^'&&arreglo[j]=='^'&&arreglo[j+1]=='.'){
 					mat[i][j]='^';
 				}else if(arreglo[j-1]=='.'&&arreglo[j]=='^'&&arreglo[j+1]=='^'){
@@ -87,7 +88,7 @@ char** llenar(char** mat,int x,int y){
 				}else{
 					mat[i][j]='.';
 				}
-			}else if(j>1&&j=x){
+			}else if(j>0&&j==x){
 				if(arreglo[j-1]=='^'&&arreglo[j]=='^'){
 					mat[i][j]='^';
 				}else if(arreglo[j-1]=='^'&&arreglo[j]=='.'){
