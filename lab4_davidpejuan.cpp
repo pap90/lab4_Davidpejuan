@@ -19,9 +19,9 @@ int main(){
 	cout<<endl;
 	int x,y;
 	x=cadena.size();
-	cout<<x;
+	//cout<<x;
 	cout<<"Ingrese el alto de la matriz: ";
-	//cin >> y;
+	cin >> y;
 	cout<<endl;
 	char** mat=NULL;
 	mat=crearmat(x,y);
