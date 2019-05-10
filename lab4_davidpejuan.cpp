@@ -10,6 +10,8 @@ void printmat(char**,int,int);
 
 char** llenar(char**,int,int);
 
+void contar(char**, int,int);
+
 int main(){
 	string cadena;
 	cout<< "Ingrese la cadena inicial: ";	
@@ -19,7 +21,7 @@ int main(){
 	x=cadena.size();
 	cout<<x;
 	cout<<"Ingrese el alto de la matriz: ";
-	cin >> y;
+	//cin >> y;
 	cout<<endl;
 	char** mat=NULL;
 	mat=crearmat(x,y);
@@ -97,6 +99,13 @@ char** llenar(char** mat,int x,int y){
 					mat[i][j]='.';
 				}
 			}
+		}
+	}
+}
+void contar(char** mat,int x, int y){
+	for(int i=0;i<y;i++){
+		for(int j=0;j<x;j++){
+			if(mat[i][j]=='.'){}
 		}
 	}
 }
